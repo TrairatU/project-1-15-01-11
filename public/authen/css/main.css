@@ -204,6 +204,10 @@ iframe {
     color: #666666;
 }
 
+.textsmall {
+    font-size: 12px
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
@@ -302,7 +306,8 @@ iframe {
     position: relative;
     width: 100%;
     z-index: 1;
-    margin-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .input100 {

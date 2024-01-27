@@ -42,22 +42,27 @@
 						เข้าสู่ระบบ
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="email" name="email" placeholder="อีเมล" required />
+					<div class="wrap-input100 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" placeholder="ชื่อผู้เข้าใช้" required />
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
-						<x-input-error :messages="$errors->get('email')" />
+					</div>
+					<div class="textsmall">
+						<x-input-error :messages="$errors->get('email')" class="text-danger" />
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+					<div class="wrap-input100 validate-input mt-3" data-validate = "Password is required">
 						<input class="input100" type="password" name="password" placeholder="รหัสผ่าน" required />
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
-						<x-input-error :messages="$errors->get('password')" />
+						
+					</div>
+					<div class="textsmall">
+						<x-input-error :messages="$errors->get('password')" class="text-danger" />
 					</div>
 					
 					<div class="container-login100-form-btn">

@@ -27,36 +27,44 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 
-                <!-- Session Status -->
-                <x-auth-session-status class="mb-4" :status="session('status')" />
-
 				<form class="login100-form validate-form" method="POST" action="{{ route('password.email') }}">
                 @csrf
 					<span class="login100-form-title">
 						รีเซ็ตรหัสผ่าน
 					</span>
 
+					<!-- Email Address -->
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="email" name="email" placeholder="อีเมล" required autofocus />
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
-						<x-input-error :messages="$errors->get('email')" class="mt-2" />
+					</div>
+					<div class="textsmall">
+						<x-input-error :messages="$errors->get('email')" class="text-danger" />
 					</div>
 
+					<!-- Session Status -->
+					<div class="mt-1">	
+						<x-auth-session-status class="mb-2 text-success" :status="session('status')" />
+					</div>
+
+					<!-- Confirm button -->
                     <div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							ส่งลิงก์สำหรับแก้ไขรหัสผ่าน
 						</button>
 					</div>
 
+					<!-- Back to Home page -->
 					<div class="text-center p-t-136">
 						<a class="txt2" href="{{route('welcome')}}">
 							กลับไปยังหน้าแรก
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
+					
 				</form>
 			</div>
 		</div>
