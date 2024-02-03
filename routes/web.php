@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Admin Menu
+Route::get('admin/product/index',[ProductController::class, 'index'])->name('admin.product');
+Route::get('admin/product/create',[ProductController::class, 'create'])->name('admin.create');
+

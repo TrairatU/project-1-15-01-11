@@ -42,6 +42,7 @@
 						เข้าสู่ระบบ
 					</span>
 
+					<!-- Input Username -->
 					<div class="wrap-input100 validate-input" data-validate = "Username is required">
 						<input class="input100" type="text" name="username" placeholder="ชื่อผู้เข้าใช้" required />
 						<span class="focus-input100"></span>
@@ -50,9 +51,10 @@
 						</span>
 					</div>
 					<div class="textsmall">
-						<x-input-error :messages="$errors->get('email')" class="text-danger" />
+						<x-input-error :messages="$errors->get('username')" class="text-danger" />
 					</div>
 
+					<!-- Input Password -->
 					<div class="wrap-input100 validate-input mt-3" data-validate = "Password is required">
 						<input class="input100" type="password" name="password" placeholder="รหัสผ่าน" required />
 						<span class="focus-input100"></span>

@@ -47,14 +47,14 @@
 
 					<!-- Input Username -->
 					<div class="wrap-input100 validate-input mt-3">
-						<input class="input100" type="text" name="username" placeholder="ชื่อผู้เข้าใช้" required autofocus autocomplete="name" />
+						<input class="input100" type="text" name="username" placeholder="ชื่อผู้เข้าใช้" required autofocus autocomplete="username" />
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user-circle" aria-hidden="true"></i>
 						</span>
 					</div>
 					<div class="textsmall">
-						<x-input-error :messages="$errors->get('name')" class="text-danger" />
+						<x-input-error :messages="$errors->get('username')" class="text-danger" />
 					</div>
 
 					<!-- Input Address -->
